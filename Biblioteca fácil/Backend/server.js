@@ -21,14 +21,14 @@ app.use('/imagens', express.static(path.join(__dirname, '../imagens')));
 // Cliente
 // Tem que vir antes de pessoaRoutes porque cliente trabalha
 // com os dados específicos de cliente.
-const clienteRoutes = require('./routes/clienteRoutes');
+const clienteRoutes = require('./Routes/clienteRoutes');
 app.use('/cliente', clienteRoutes);
 
 
 // Funcionário
 // Tem que vir antes de pessoaRoutes porque funcionário
 // trabalha com os dados específicos de funcionário.
-const funcionarioRoutes = require('./routes/funcionarioRoutes');
+const funcionarioRoutes = require('./Routes/funcionarioRoutes');
 app.use('/funcionario', funcionarioRoutes);
 
 //Cargo
@@ -38,8 +38,20 @@ app.use('/cargo', cargoRoutes);
 
 // Pessoa
 // Fica depois das rotas específicas.
-const pessoaRoutes = require('./routes/pessoaRoutes');
+const pessoaRoutes = require('./Routes/pessoaRoutes');
 app.use('/pessoa', pessoaRoutes);
+
+//Autores
+const autorRoutes = require('./routes/autorRoutes');
+app.use('/autor', autorRoutes)
+
+//Editoras
+const editoraRoutes = require('./routes/editoraRoutes');
+app.use('/editora', editoraRoutes)
+
+//livros
+const livroRoutes = require('./routes/livroRoutes');
+app.use('/livro', livroRoutes)
 
 
 // ======================================================

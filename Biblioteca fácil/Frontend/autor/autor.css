@@ -1,0 +1,571 @@
+/* Remove as margens e espaçamentos padrão do navegador */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* CORPO DA PÁGINA */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #f5f3ff);
+
+    color: #2e1a47;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+header {
+    background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    box-shadow: 0 8px 25px rgba(76, 29, 149, 0.3);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Detalhe decorativo do cabeçalho */
+
+header::before {
+    content: "";
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: -90px;
+    left: -40px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Outro detalhe decorativo */
+
+header::after {
+    content: "";
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    right: -50px;
+    bottom: -80px;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+header h1 {
+    font-size: 36px;
+
+    margin-bottom: 8px;
+
+    position: relative;
+
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 16px;
+
+    color: #ede9fe;
+
+    position: relative;
+}
+
+/* ============================= */
+/* CONTEÚDO PRINCIPAL */
+/* ============================= */
+
+main {
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+}
+
+.container-master {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
+
+.form-esquerda {
+    background-color: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #ddd6fe;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 20px rgba(76, 29, 149, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Linha roxa no topo */
+
+.form-esquerda::before {
+    content: "";
+
+    width: 100%;
+    height: 5px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+}
+
+.form-esquerda h2 {
+    color: #5b21b6;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+/* ============================= */
+/* LABELS */
+/* ============================= */
+
+.form-esquerda label {
+    display: block;
+
+    color: #5b21b6;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+}
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+.form-esquerda input[type="text"],
+.form-esquerda input[type="number"] {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #2e1a47;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+
+    width: 100%;
+}
+
+.form-esquerda input[type="text"]:focus,
+.form-esquerda input[type="number"]:focus {
+    border-color: #8b5cf6;
+
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* ============================= */
+/* LINHA DO ID */
+/* ============================= */
+
+.linha-id {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.linha-id #inputId_autor {
+    flex: 1;
+
+    min-width: 180px;
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+input[type="button"] {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 11px 17px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+input[type="button"]:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(76, 29, 149, 0.20);
+}
+
+/* ============================= */
+/* BOTÃO PROCURAR */
+/* ============================= */
+
+#btProcure {
+    background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+
+    color: white;
+}
+
+#btProcure:hover {
+    background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* ============================= */
+/* BOTÃO INSERIR */
+/* ============================= */
+
+#btInserir {
+    background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+
+    color: white;
+}
+
+#btInserir:hover {
+    background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* ============================= */
+/* BOTÃO ALTERAR */
+/* ============================= */
+
+#btAlterar {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+
+    color: white;
+}
+
+/* ============================= */
+/* BOTÃO EXCLUIR */
+/* ============================= */
+
+#btExcluir {
+    background: linear-gradient(135deg, #be123c, #e11d48);
+
+    color: white;
+}
+
+/* ============================= */
+/* ÁREA DOS BOTÕES */
+/* ============================= */
+
+.botoes-acao {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* ============================= */
+/* BOTÃO SALVAR */
+/* ============================= */
+
+#btSalvar {
+    background: linear-gradient(135deg, #15803d, #22c55e);
+
+    color: white;
+}
+
+/* ============================= */
+/* BOTÃO CANCELAR */
+/* ============================= */
+
+#btCancelar {
+    background: #ede9fe;
+
+    color: #5b21b6;
+
+    border: 1px solid #ddd6fe;
+}
+
+#btCancelar:hover {
+    background: #ddd6fe;
+}
+
+/* ============================= */
+/* MENSAGEM DE AVISO */
+/* ============================= */
+
+#divAviso {
+    background-color: #fdfbff;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 10px;
+
+    padding: 13px 15px;
+
+    margin-top: 20px;
+
+    color: #5b21b6;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+/* ============================= */
+/* LISTA DE AUTORES */
+/* ============================= */
+
+.lista-autor {
+    background-color: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #ddd6fe;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 20px rgba(76, 29, 149, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Linha roxa no topo da lista */
+
+.lista-autor::before {
+    content: "";
+
+    width: 100%;
+    height: 5px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+}
+
+.lista-autor h3 {
+    color: #5b21b6;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+/* ============================= */
+/* ÁREA DE SAÍDA */
+/* ============================= */
+
+#outputSaida {
+    width: 100%;
+
+    color: #2e1a47;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* TABELA DA LISTAGEM */
+/* ============================= */
+
+#outputSaida table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+#outputSaida thead {
+    background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+
+    color: white;
+}
+
+#outputSaida th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+#outputSaida td {
+    padding: 14px 15px;
+
+    color: #2e1a47;
+
+    border-bottom: 1px solid #ede9fe;
+}
+
+#outputSaida tbody tr:nth-child(even) {
+    background-color: #faf7ff;
+}
+
+#outputSaida tbody tr:hover {
+    background-color: #ede9fe;
+
+    transition: 0.2s;
+}
+
+/* ============================= */
+/* DESTAQUE DO ID DO AUTOR */
+/* ============================= */
+
+#outputSaida b {
+    color: #6d28d9;
+
+    font-size: 17px;
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+footer {
+    background: linear-gradient(135deg, #2e1065, #4c1d95);
+
+    color: #ede9fe;
+
+    text-align: center;
+
+    padding: 22px;
+
+    font-size: 14px;
+
+    box-shadow: 0 -5px 20px rgba(46, 16, 101, 0.15);
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 35px 20px;
+    }
+
+    .linha-id {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .linha-id input {
+        width: 100%;
+    }
+
+    .botoes-acao {
+        flex-direction: column;
+    }
+
+    .botoes-acao input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .form-esquerda,
+    .lista-autor {
+        padding: 22px;
+    }
+
+    #outputSaida th,
+    #outputSaida td {
+        padding: 10px;
+
+        font-size: 13px;
+    }
+}

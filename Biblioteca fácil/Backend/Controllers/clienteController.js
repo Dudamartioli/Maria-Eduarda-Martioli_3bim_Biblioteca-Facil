@@ -194,7 +194,7 @@ exports.obterCliente = async (req, res) => {
   try {
 
     // Pega o CPF enviado na URL
-    const cpf = req.params.id;
+    const cpf = req.params.cpf;
 
 
     // Procura o cliente pelo CPF
@@ -253,7 +253,7 @@ exports.atualizarCliente = async (req, res) => {
   try {
 
     // Pega o CPF enviado na URL
-    const cpf = req.params.id;
+    const cpf = req.params.cpf;
 
 
     // Pega os dados enviados pelo frontend
@@ -322,7 +322,7 @@ exports.atualizarCliente = async (req, res) => {
 exports.deletarCliente = async (req, res) => {
 
   // Pega o CPF enviado na URL
-  const cpf = req.params.id;
+  const cpf = req.params.cpf;
 
 
   try {

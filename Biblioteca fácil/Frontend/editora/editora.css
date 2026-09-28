@@ -1,0 +1,590 @@
+/* ======================================================
+   CONFIGURAÇÕES GERAIS
+   ====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #f5f3ff);
+    color: #2e1a47;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ======================================================
+   CABEÇALHO
+   ====================================================== */
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+    color: white;
+
+    text-align: center;
+    padding: 35px 20px;
+
+    box-shadow: 0 6px 20px rgba(76, 29, 149, 0.25);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    top: -90px;
+    left: -50px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 50%;
+
+    bottom: -130px;
+    right: -60px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+
+    font-size: 36px;
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+    position: relative;
+    z-index: 1;
+
+    color: #ede9fe;
+    font-size: 16px;
+}
+
+
+/* ======================================================
+   ÁREA PRINCIPAL
+   ====================================================== */
+
+main {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+
+    flex: 1;
+}
+
+.container-master {
+    width: 100%;
+}
+
+.conteudo-principal {
+    width: 100%;
+}
+
+
+/* ======================================================
+   FORMULÁRIO
+   ====================================================== */
+
+.form-esquerda {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #ddd6fe;
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 25px rgba(76, 29, 149, 0.12);
+
+    overflow: hidden;
+}
+
+.form-esquerda::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #6d28d9,
+        #a855f7,
+        #8b5cf6
+    );
+}
+
+.form-esquerda h2 {
+    color: #5b21b6;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ======================================================
+   LABELS
+   ====================================================== */
+
+.form-esquerda label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #4c1d95;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+
+/* ======================================================
+   INPUTS
+   ====================================================== */
+
+.form-esquerda input[type="number"],
+.form-esquerda input[type="text"] {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd6fe;
+    border-radius: 10px;
+
+    background: #faf7ff;
+
+    color: #2e1a47;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-esquerda input[type="number"]:focus,
+.form-esquerda input[type="text"]:focus {
+    border-color: #8b5cf6;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+
+/* ======================================================
+   LINHA DO ID
+   ====================================================== */
+
+.linha-id {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+.linha-id input[type="number"] {
+    flex: 1;
+}
+
+
+/* ======================================================
+   BOTÕES
+   ====================================================== */
+
+.linha-id input[type="button"],
+.botoes-acao input[type="button"] {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    white-space: nowrap;
+}
+
+
+/* Botão Procure */
+
+#btProcure {
+    background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+    color: white;
+}
+
+#btProcure:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(109, 40, 217, 0.25);
+}
+
+
+/* Botão Inserir */
+
+#btInserir {
+    background: linear-gradient(135deg, #6d28d9, #a855f7);
+    color: white;
+}
+
+#btInserir:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Botão Alterar */
+
+#btAlterar {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    color: white;
+}
+
+#btAlterar:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Botão Excluir */
+
+#btExcluir {
+    background: linear-gradient(135deg, #be123c, #e11d48);
+    color: white;
+}
+
+#btExcluir:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(190, 18, 60, 0.25);
+}
+
+
+/* ======================================================
+   ÁREA DOS BOTÕES SALVAR E CANCELAR
+   ====================================================== */
+
+.botoes-acao {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+#btSalvar {
+    background: linear-gradient(135deg, #15803d, #22c55e);
+    color: white;
+}
+
+#btSalvar:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(21, 128, 61, 0.25);
+}
+
+#btCancelar {
+    background: #ede9fe;
+    color: #5b21b6;
+
+    border: 1px solid #ddd6fe !important;
+}
+
+#btCancelar:hover {
+    background: #ddd6fe;
+
+    transform: translateY(-2px);
+}
+
+
+/* ======================================================
+   AVISO
+   ====================================================== */
+
+#divAviso {
+    margin-top: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    background: #f5f3ff;
+
+    border-left: 5px solid #8b5cf6;
+
+    color: #5b21b6;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ======================================================
+   LISTA DE EDITORAS
+   ====================================================== */
+
+.lista-editoras {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #ddd6fe;
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    box-shadow: 0 8px 25px rgba(76, 29, 149, 0.12);
+
+    overflow: hidden;
+}
+
+.lista-editoras::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #6d28d9,
+        #a855f7,
+        #8b5cf6
+    );
+}
+
+.lista-editoras h3 {
+    color: #5b21b6;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ======================================================
+   ÁREA ONDE O JAVASCRIPT COLOCA A LISTA
+   ====================================================== */
+
+#outputSaida {
+    width: 100%;
+
+    overflow-x: auto;
+
+    color: #2e1a47;
+
+    line-height: 1.6;
+}
+
+
+/* ======================================================
+   TABELA DE EDITORAS
+   ====================================================== */
+
+#outputSaida table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd6fe;
+}
+
+#outputSaida th {
+    background: linear-gradient(
+        135deg,
+        #6d28d9,
+        #7c3aed
+    );
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+#outputSaida td {
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #ede9fe;
+
+    background: white;
+
+    color: #3b2455;
+}
+
+#outputSaida tbody tr:nth-child(even) td {
+    background: #faf7ff;
+}
+
+#outputSaida tbody tr:hover td {
+    background: #ede9fe;
+
+    transition: 0.2s;
+}
+
+
+/* ======================================================
+   MENSAGENS DA LISTA
+   ====================================================== */
+
+#outputSaida:empty {
+    display: none;
+}
+
+
+/* ======================================================
+   RODAPÉ
+   ====================================================== */
+
+footer {
+    background: linear-gradient(
+        135deg,
+        #2e1065,
+        #4c1d95
+    );
+
+    color: #ede9fe;
+
+    text-align: center;
+
+    padding: 22px 15px;
+
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ======================================================
+   RESPONSIVIDADE
+   ====================================================== */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 18px;
+    }
+
+    header {
+        padding: 28px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .form-esquerda,
+    .lista-editoras {
+        padding: 22px;
+    }
+
+    .linha-id {
+        flex-wrap: wrap;
+    }
+
+    .linha-id input[type="number"] {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .linha-id input[type="button"] {
+        flex: 1;
+    }
+
+    .botoes-acao {
+        flex-direction: column;
+    }
+
+    .botoes-acao input[type="button"] {
+        width: 100%;
+    }
+
+    #outputSaida table {
+        min-width: 500px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .form-esquerda h2,
+    .lista-editoras h3 {
+        font-size: 21px;
+    }
+
+    .linha-id {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .linha-id input[type="number"],
+    .linha-id input[type="button"] {
+        width: 100%;
+    }
+}
