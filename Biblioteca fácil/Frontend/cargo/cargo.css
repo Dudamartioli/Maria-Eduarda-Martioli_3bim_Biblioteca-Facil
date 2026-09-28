@@ -1,0 +1,321 @@
+/* ======================================================
+   CONFIGURAÇÕES GERAIS
+   ====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3eff8;
+    color: #333;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ======================================================
+   CABEÇALHO
+   ====================================================== */
+
+header {
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* ======================================================
+   CONTAINER PRINCIPAL
+   ====================================================== */
+
+.container-master {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+    flex: 1;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ======================================================
+   FORMULÁRIO
+   ====================================================== */
+
+.form-esquerda {
+    background-color: white;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(70, 30, 90, 0.15);
+    border-top: 5px solid #7b1fa2;
+}
+
+.form-esquerda h2 {
+    color: #6a1b9a;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+
+/* ======================================================
+   LABELS E INPUTS
+   ====================================================== */
+
+.form-esquerda label {
+    display: block;
+    font-weight: bold;
+    color: #4a235a;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+.form-esquerda input[type="number"],
+.form-esquerda input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8c5e3;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-esquerda input[type="number"]:focus,
+.form-esquerda input[type="text"]:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.12);
+}
+
+
+/* ======================================================
+   LINHA DO ID
+   ====================================================== */
+
+.linha-id {
+    display: flex;
+    gap: 10px;
+}
+
+.linha-id input[type="number"] {
+    flex: 1;
+}
+
+
+/* ======================================================
+   BOTÕES
+   ====================================================== */
+
+input[type="button"] {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btProcure {
+    background-color: #7b1fa2;
+    color: white;
+}
+
+#btProcure:hover {
+    background-color: #6a1b9a;
+    transform: translateY(-2px);
+}
+
+#btInserir {
+    background-color: #8e44ad;
+    color: white;
+}
+
+#btAlterar {
+    background-color: #9b59b6;
+    color: white;
+}
+
+#btExcluir {
+    background-color: #c0392b;
+    color: white;
+}
+
+#btInserir:hover,
+#btAlterar:hover,
+#btExcluir:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+}
+
+
+/* ======================================================
+   AVISO
+   ====================================================== */
+
+#divAviso {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #f0e6f5;
+    color: #6a1b9a;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ======================================================
+   BOTÕES SALVAR E CANCELAR
+   ====================================================== */
+
+.botoes-acao {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#btSalvar {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+#btCancelar {
+    background-color: #777;
+    color: white;
+}
+
+#btSalvar:hover,
+#btCancelar:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+}
+
+
+/* ======================================================
+   LISTA DE CARGOS
+   ====================================================== */
+
+.lista-cargos {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(70, 30, 90, 0.15);
+}
+
+.lista-cargos h3 {
+    color: #6a1b9a;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#outputSaida {
+    background-color: #faf8fc;
+    border: 1px solid #e0d4e6;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 80px;
+}
+
+
+/* ======================================================
+   TABELA / LISTAGEM
+   ====================================================== */
+
+#outputSaida table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#outputSaida th {
+    background-color: #7b1fa2;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+#outputSaida td {
+    padding: 11px;
+    border-bottom: 1px solid #e5dce9;
+}
+
+#outputSaida tr:hover {
+    background-color: #f3eaf7;
+}
+
+
+/* ======================================================
+   RODAPÉ
+   ====================================================== */
+
+footer {
+    background-color: #4a235a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ======================================================
+   RESPONSIVIDADE
+   ====================================================== */
+
+@media (max-width: 700px) {
+
+    .container-master {
+        width: 95%;
+    }
+
+    .form-esquerda {
+        padding: 22px;
+    }
+
+    .linha-id {
+        flex-wrap: wrap;
+    }
+
+    .linha-id input[type="number"] {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .linha-id input[type="button"] {
+        flex: 1;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}

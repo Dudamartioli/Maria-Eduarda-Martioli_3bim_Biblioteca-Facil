@@ -1,0 +1,367 @@
+/* Remove as margens e espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Faz o tamanho dos elementos incluir o padding e a borda */
+    box-sizing: border-box;
+}
+
+/* Estiliza o corpo inteiro da página */
+body {
+    /* Define a fonte utilizada na página */
+    font-family: Arial, sans-serif;
+
+    /* Define a cor de fundo */
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #f5f3ff);
+
+    /* Define a cor padrão dos textos */
+    color: #2e1a47;
+
+    /* Garante que a página ocupe pelo menos toda a altura da tela */
+    min-height: 100vh;
+
+    /* Organiza o conteúdo da página */
+    display: flex;
+
+    /* Coloca os elementos um abaixo do outro */
+    flex-direction: column;
+}
+
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+/* Estiliza o cabeçalho */
+header {
+    /* Define a cor de fundo do cabeçalho */
+    background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+
+    /* Define a cor dos textos */
+    color: white;
+
+    /* Centraliza os textos */
+    text-align: center;
+
+    /* Cria espaço interno */
+    padding: 45px 20px;
+
+    /* Cria uma sombra abaixo do cabeçalho */
+    box-shadow: 0 8px 25px rgba(76, 29, 149, 0.3);
+
+    /* Coloca o cabeçalho acima dos outros elementos */
+    position: relative;
+
+    /* Esconde qualquer conteúdo que ultrapasse o cabeçalho */
+    overflow: hidden;
+}
+
+
+/* Cria um detalhe decorativo no cabeçalho */
+header::before {
+    /* Necessário para criar o elemento decorativo */
+    content: "";
+
+    /* Define o tamanho do círculo */
+    width: 180px;
+    height: 180px;
+
+    /* Deixa o elemento redondo */
+    border-radius: 50%;
+
+    /* Define a posição do círculo */
+    position: absolute;
+
+    /* Coloca o círculo parcialmente para fora */
+    top: -90px;
+    left: -40px;
+
+    /* Define a cor do círculo */
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Estiliza o título principal */
+header h1 {
+    /* Define o tamanho do título */
+    font-size: 42px;
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 10px;
+
+    /* Coloca o título acima do elemento decorativo */
+    position: relative;
+
+    /* Deixa o título mais destacado */
+    letter-spacing: 1px;
+}
+
+
+/* Estiliza o texto abaixo do título */
+header p {
+    /* Define o tamanho do texto */
+    font-size: 17px;
+
+    /* Deixa o texto um pouco transparente */
+    color: #ede9fe;
+
+    /* Coloca o texto acima do elemento decorativo */
+    position: relative;
+}
+
+
+/* ============================= */
+/* CONTEÚDO PRINCIPAL */
+/* ============================= */
+
+/* Estiliza a área principal */
+.container-master {
+    /* Faz essa área ocupar todo o espaço entre o header e o footer */
+    flex: 1;
+
+    /* Usa flexbox para organizar o conteúdo */
+    display: flex;
+
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+
+    /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+
+    /* Cria espaço nas laterais */
+    padding: 50px 30px;
+}
+
+
+/* Organiza os cartões do menu */
+.menu-grid {
+    /* Usa o sistema de grid */
+    display: grid;
+
+    /* Cria quatro colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Define o espaço entre os cartões */
+    gap: 30px;
+
+    /* Define a largura máxima do conjunto */
+    max-width: 1400px;
+
+    /* Faz o conjunto ocupar o espaço disponível */
+    width: 100%;
+
+    /* Centraliza o grid */
+    margin: 0 auto;
+}
+
+
+/* ============================= */
+/* CARTÕES DO MENU */
+/* ============================= */
+
+/* Estiliza os links que funcionam como cartões */
+.card-menu {
+    /* Define a cor de fundo */
+    background-color: white;
+
+    /* Remove o sublinhado dos links */
+    text-decoration: none;
+
+    /* Define a cor do texto */
+    color: #2e1a47;
+
+    /* Cria espaço interno */
+    padding: 35px 25px;
+
+    /* Arredonda as bordas */
+    border-radius: 20px;
+
+    /* Cria uma borda suave */
+    border: 1px solid #ddd6fe;
+
+    /* Cria uma sombra */
+    box-shadow: 0 8px 20px rgba(76, 29, 149, 0.12);
+
+    /* Permite que a animação funcione corretamente */
+    transition: all 0.3s ease;
+
+    /* Centraliza o conteúdo */
+    text-align: center;
+
+    /* Define a posição para os detalhes internos */
+    position: relative;
+
+    /* Esconde elementos que ultrapassarem o cartão */
+    overflow: hidden;
+}
+
+
+/* Cria uma linha roxa no topo do cartão */
+.card-menu::before {
+    /* Necessário para criar o elemento */
+    content: "";
+
+    /* Ocupa toda a largura do cartão */
+    width: 100%;
+    height: 5px;
+
+    /* Define a posição da linha */
+    position: absolute;
+
+    /* Coloca a linha no topo */
+    top: 0;
+    left: 0;
+
+    /* Define a cor da linha */
+    background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+}
+
+
+/* Efeito quando o mouse passa sobre o cartão */
+.card-menu:hover {
+    /* Move o cartão um pouco para cima */
+    transform: translateY(-10px);
+
+    /* Aumenta a sombra */
+    box-shadow: 0 18px 35px rgba(76, 29, 149, 0.25);
+
+    /* Muda levemente a borda */
+    border-color: #a78bfa;
+}
+
+
+/* ============================= */
+/* ÍCONES */
+/* ============================= */
+
+/* Estiliza os ícones dos cartões */
+.card-icon {
+    /* Define o tamanho do círculo */
+    width: 75px;
+    height: 75px;
+
+    /* Deixa o círculo perfeitamente redondo */
+    border-radius: 50%;
+
+    /* Define o fundo do círculo */
+    background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+
+    /* Centraliza o emoji horizontalmente */
+    margin: 0 auto 20px auto;
+
+    /* Centraliza o emoji */
+    display: flex;
+
+    /* Alinha verticalmente */
+    align-items: center;
+
+    /* Alinha horizontalmente */
+    justify-content: center;
+
+    /* Define o tamanho do emoji */
+    font-size: 34px;
+
+    /* Cria uma pequena sombra */
+    box-shadow: 0 5px 15px rgba(109, 40, 217, 0.15);
+
+    /* Faz o ícone ter uma animação suave */
+    transition: transform 0.3s ease;
+}
+
+
+/* Aumenta o ícone quando o cartão recebe hover */
+.card-menu:hover .card-icon {
+    /* Aumenta levemente o ícone */
+    transform: scale(1.1) rotate(3deg);
+}
+
+
+/* ============================= */
+/* TÍTULOS DOS CARTÕES */
+/* ============================= */
+
+/* Estiliza o título de cada cartão */
+.card-menu h2 {
+    /* Define a cor roxa do título */
+    color: #5b21b6;
+
+    /* Define o tamanho do título */
+    font-size: 23px;
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 12px;
+}
+
+
+/* Estiliza a descrição dos cartões */
+.card-menu p {
+    /* Define o tamanho da descrição */
+    font-size: 14px;
+
+    /* Define a altura das linhas */
+    line-height: 1.6;
+
+    /* Define uma cor mais suave */
+    color: #6b5b7a;
+}
+
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+/* Estiliza o rodapé */
+footer {
+    /* Define o fundo roxo */
+    background: linear-gradient(135deg, #2e1065, #4c1d95);
+
+    /* Define a cor do texto */
+    color: #ede9fe;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Cria espaço interno */
+    padding: 22px;
+
+    /* Define o tamanho do texto */
+    font-size: 14px;
+
+    /* Cria uma sombra acima do rodapé */
+    box-shadow: 0 -5px 20px rgba(46, 16, 101, 0.15);
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Quando a tela ficar menor que 1000px */
+@media (max-width: 1000px) {
+
+    /* Coloca dois cartões por linha */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Quando a tela ficar menor que 600px */
+@media (max-width: 600px) {
+
+    /* Coloca os cartões um abaixo do outro */
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Diminui o tamanho do título */
+    header h1 {
+        font-size: 32px;
+    }
+
+    /* Diminui o espaço da área principal */
+    .container-master {
+        padding: 35px 20px;
+    }
+}

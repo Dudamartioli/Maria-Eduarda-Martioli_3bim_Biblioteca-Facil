@@ -1,0 +1,731 @@
+/* Remove as margens e espaçamentos padrão do navegador */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* ============================= */
+/* CORPO DA PÁGINA */
+/* ============================= */
+
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #f5f3ff);
+
+color: #2e1a47;
+
+min-height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+header {
+background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+color: white;
+
+text-align: center;
+
+padding: 35px 20px;
+
+box-shadow: 0 8px 25px rgba(76, 29, 149, 0.3);
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+/* Detalhe decorativo do cabeçalho */
+header::before {
+content: "";
+width: 180px;
+height: 180px;
+
+border-radius: 50%;
+
+position: absolute;
+
+top: -90px;
+left: -40px;
+
+background: rgba(255, 255, 255, 0.08);
+
+}
+
+/* Outro detalhe decorativo */
+header::after {
+content: "";
+width: 140px;
+height: 140px;
+
+border-radius: 50%;
+
+position: absolute;
+
+right: -50px;
+bottom: -80px;
+
+background: rgba(255, 255, 255, 0.07);
+
+}
+
+header h1 {
+font-size: 36px;
+
+margin-bottom: 8px;
+
+position: relative;
+
+letter-spacing: 1px;
+
+}
+
+header p {
+font-size: 16px;
+color: #ede9fe;
+
+position: relative;
+
+}
+
+/* ============================= */
+/* CONTEÚDO PRINCIPAL */
+/* ============================= */
+
+main {
+flex: 1;
+width: 100%;
+
+max-width: 1400px;
+
+margin: 0 auto;
+
+padding: 45px 30px;
+}
+
+/* ============================= */
+/* SEÇÃO DO FORMULÁRIO */
+/* ============================= */
+
+.form-section {
+background-color: white;
+border-radius: 20px;
+
+border: 1px solid #ddd6fe;
+
+padding: 30px;
+
+margin-bottom: 30px;
+
+box-shadow: 0 8px 20px rgba(76, 29, 149, 0.12);
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+/* Linha roxa no topo da caixa */
+.form-section::before {
+content: "";
+width: 100%;
+height: 5px;
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+
+}
+
+.form-section h2 {
+color: #5b21b6;
+font-size: 25px;
+
+margin-bottom: 25px;
+
+text-align: center;
+
+}
+
+/* ============================= */
+/* ÁREA DE BUSCA */
+/* ============================= */
+
+.search-container {
+margin-bottom: 25px;
+}
+
+.search-container label {
+display: block;
+
+color: #5b21b6;
+
+font-weight: bold;
+
+margin-bottom: 8px;
+
+}
+
+.search-input-group {
+display: flex;
+align-items: center;
+
+gap: 10px;
+
+flex-wrap: wrap;
+
+}
+
+/* ============================= */
+/* CAMPOS */
+/* ============================= */
+
+input,
+select {
+font-family: Arial, sans-serif;
+font-size: 15px;
+
+padding: 11px 13px;
+
+border: 1px solid #ddd6fe;
+
+border-radius: 10px;
+
+background-color: white;
+
+color: #2e1a47;
+
+outline: none;
+
+transition: all 0.3s ease;
+
+}
+
+input:focus,
+select:focus {
+border-color: #8b5cf6;
+box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+
+}
+
+#searchId {
+flex: 1;
+min-width: 220px;
+
+}
+
+/* ============================= */
+/* FIELDSET */
+/* ============================= */
+
+fieldset {
+border: 1px solid #ddd6fe;
+
+border-radius: 15px;
+
+padding: 25px;
+
+background-color: #fdfbff;
+
+}
+
+legend {
+color: #5b21b6;
+font-size: 18px;
+
+font-weight: bold;
+
+padding: 0 10px;
+
+
+}
+
+/* ============================= */
+/* CAMPOS DO FORMULÁRIO */
+/* ============================= */
+
+.form-group {
+margin-bottom: 18px;
+}
+
+.form-group label {
+display: block;
+
+
+color: #5b21b6;
+
+font-weight: bold;
+
+margin-bottom: 7px;
+
+
+}
+
+.form-group input {
+width: 100%;
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+button {
+border: none;
+
+
+border-radius: 10px;
+
+padding: 11px 17px;
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+
+
+}
+
+button:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(76, 29, 149, 0.20);
+
+}
+
+/* Botão Buscar */
+
+#btnBuscar {
+background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+color: white;
+
+}
+
+#btnBuscar:hover {
+background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* Botão Incluir */
+
+.btn-primary {
+background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+
+
+color: white;
+
+
+}
+
+.btn-primary:hover {
+background: linear-gradient(135deg, #5b21b6, #7c3aed);
+}
+
+/* Botão Alterar */
+
+.btn-secondary {
+background: linear-gradient(135deg, #8b5cf6, #a855f7);
+
+
+color: white;
+
+
+}
+
+/* Botão Excluir */
+
+.btn-danger {
+background: linear-gradient(135deg, #be123c, #e11d48);
+
+
+color: white;
+
+
+}
+
+/* Botão Salvar */
+
+.btn-save {
+background: linear-gradient(135deg, #15803d, #22c55e);
+
+
+color: white;
+
+
+}
+
+/* Botão Cancelar */
+
+.btn-cancel {
+background: #ede9fe;
+
+
+color: #5b21b6;
+
+border: 1px solid #ddd6fe;
+
+
+}
+
+.btn-cancel:hover {
+background: #ddd6fe;
+}
+
+/* ============================= */
+/* ÁREA FUNCIONÁRIO / USUÁRIO */
+/* ============================= */
+
+.umParaum {
+display: grid;
+
+
+grid-template-columns: 1fr 1fr;
+
+gap: 25px;
+
+margin-top: 25px;
+
+
+}
+
+/* Caixas */
+
+.funcionario,
+.cliente {
+background: white;
+
+
+border: 1px solid #ddd6fe;
+
+border-radius: 20px;
+
+padding: 25px;
+
+box-shadow: 0 8px 20px rgba(76, 29, 149, 0.10);
+
+position: relative;
+
+overflow: hidden;
+
+
+}
+
+/* Linha colorida no topo */
+
+.funcionario::before,
+.cliente::before {
+content: "";
+
+
+width: 100%;
+height: 4px;
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+
+
+}
+
+/* Títulos */
+
+.funcionario span,
+.cliente span {
+color: #5b21b6;
+
+
+font-size: 19px;
+
+font-weight: bold;
+
+margin-left: 8px;
+
+
+}
+
+/* Labels */
+
+.funcionario label,
+.cliente label {
+display: block;
+
+
+color: #5b21b6;
+
+font-weight: bold;
+
+margin-top: 17px;
+
+margin-bottom: 7px;
+
+
+}
+
+/* Campos */
+
+.funcionario input[type="number"],
+.funcionario input[type="date"],
+.funcionario select,
+.cliente input[type="number"],
+.cliente input[type="date"] {
+width: 100%;
+}
+
+/* Checkbox */
+
+input[type="checkbox"] {
+width: 18px;
+
+
+height: 18px;
+
+accent-color: #7c3aed;
+
+cursor: pointer;
+
+
+}
+
+/* ============================= */
+/* TABELA */
+/* ============================= */
+
+.list-section {
+background-color: white;
+
+
+border-radius: 20px;
+
+border: 1px solid #ddd6fe;
+
+padding: 30px;
+
+box-shadow: 0 8px 20px rgba(76, 29, 149, 0.12);
+
+position: relative;
+
+overflow: hidden;
+
+
+}
+
+/* Linha roxa no topo */
+
+.list-section::before {
+content: "";
+
+
+width: 100%;
+height: 5px;
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+background: linear-gradient(90deg, #6d28d9, #a855f7, #8b5cf6);
+
+
+}
+
+/* Container da tabela */
+
+.table-container {
+width: 100%;
+
+
+overflow-x: auto;
+
+
+}
+
+/* Tabela */
+
+table {
+width: 100%;
+
+
+border-collapse: collapse;
+
+overflow: hidden;
+
+border-radius: 12px;
+
+
+}
+
+/* Cabeçalho */
+
+thead {
+background: linear-gradient(135deg, #4c1d95, #6d28d9, #7c3aed);
+
+
+color: white;
+
+
+}
+
+th {
+padding: 15px;
+
+
+text-align: left;
+
+font-size: 15px;
+
+
+}
+
+/* Células */
+
+td {
+padding: 14px 15px;
+
+
+color: #2e1a47;
+
+border-bottom: 1px solid #ede9fe;
+
+
+}
+
+/* Linhas alternadas */
+
+tbody tr:nth-child(even) {
+background-color: #faf7ff;
+}
+
+/* Efeito ao passar o mouse */
+
+tbody tr:hover {
+background-color: #ede9fe;
+
+
+transition: 0.2s;
+
+
+}
+
+/* ============================= */
+/* MENSAGENS */
+/* ============================= */
+
+.message-container {
+position: fixed;
+
+
+right: 25px;
+
+bottom: 25px;
+
+z-index: 1000;
+
+
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+footer {
+background: linear-gradient(135deg, #2e1065, #4c1d95);
+
+
+color: #ede9fe;
+
+text-align: center;
+
+padding: 22px;
+
+font-size: 14px;
+
+box-shadow: 0 -5px 20px rgba(46, 16, 101, 0.15);
+
+
+}
+
+footer p {
+margin: 5px;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+
+
+.umParaum {
+    grid-template-columns: 1fr;
+}
+
+main {
+    padding: 35px 20px;
+}
+
+
+}
+
+@media (max-width: 700px) {
+
+
+.search-input-group {
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+.search-input-group input,
+.search-input-group button {
+    width: 100%;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+header {
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+main {
+    padding: 30px 15px;
+}
+
+.form-section,
+.list-section {
+    padding: 22px;
+}
+
+th,
+td {
+    padding: 10px;
+
+    font-size: 13px;
+}
+
+
+}
