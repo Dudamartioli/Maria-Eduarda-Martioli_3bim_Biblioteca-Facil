@@ -177,14 +177,23 @@ function carregarImagem(issn) {
         return;
     }
 
-    // Monta o caminho da imagem
+    // Primeiro tenta carregar a imagem em PNG
     imagem.src =
         `${URL_API}/imagens/${issn}.png?t=${new Date().getTime()}`;
 
-    // Se não encontrar a imagem, mostra a silhueta
+    // Se não encontrar o PNG, tenta carregar o JPG
     imagem.onerror = function () {
 
-        imagem.src = SILHUETA_URL;
+        // Remove o evento para não ficar entrando em loop
+        imagem.onerror = function () {
+
+            // Se também não encontrar o JPG, mostra a silhueta
+            imagem.src = SILHUETA_URL;
+        };
+
+        // Tenta carregar a imagem JPG
+        imagem.src =
+            `${URL_API}/imagens/${issn}.jpg?t=${new Date().getTime()}`;
     };
 }
 
@@ -209,7 +218,7 @@ function acionarUpload() {
     }
 
     // Abre a janela para escolher imagem
-    document.getElementById("inputImagem").click();
+    document.getElementById("arquivoimg").click();
 }
 
 
@@ -220,7 +229,7 @@ function acionarUpload() {
 function previewImagem() {
 
     // Pega o campo de imagem
-    const input = document.getElementById("inputImagem");
+    const input = document.getElementById("arquivoimg");
 
     // Verifica se escolheu algum arquivo
     if (input.files.length > 0) {
@@ -246,7 +255,7 @@ function previewImagem() {
 async function uploadImagemParaServidor(issn) {
 
     // Pega o campo de imagem
-    const input = document.getElementById("inputImagem");
+    const input = document.getElementById("arquivoimg");
 
     // Se não escolheu imagem, não faz nada
     if (input.files.length === 0) {
@@ -988,7 +997,7 @@ function limparAtributos() {
 
     // Limpa a imagem escolhida
     document.getElementById(
-        "inputImagem"
+        "arquivoimg"
     ).value = "";
 }
 
